@@ -8,11 +8,14 @@ class Stack:
         self.top = None
 
     def pop(self):
-        if self.top is None:
-            raise Exception
-        data = self.top.data
+        data = self.peek()
         self.top = self.top.next
         return data
+
+    def peek(self):
+        if self.top is None:
+            raise Exception
+        return self.top.data
 
     def push(self, data):
         item = Item(data)
@@ -29,6 +32,8 @@ def test_stack():
     print(f"Pushing {N} values")
     for i in range(N):
         s.push(i)
+    print("Peeking top value")
+    print(s.peek())
     print("Poping values")
     for i in range(N):
         print(s.pop())
