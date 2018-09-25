@@ -13,7 +13,7 @@ class Stack:
         return data
 
     def peek(self):
-        if self.top is None:
+        if self.empty():
             raise Exception
         return self.top.data
 
@@ -23,11 +23,19 @@ class Stack:
         self.top = item
         self.top.next = cur
 
+    def empty(self):
+        if self.top is None:
+            return True
+        return False
+
 
 def test_stack():
     print("Testing stack")
     s = Stack()
     N = 100
+
+    print("Check if empty")
+    print(s.empty())
 
     print(f"Pushing {N} values")
     for i in range(N):
