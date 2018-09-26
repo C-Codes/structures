@@ -1,4 +1,4 @@
-from linked_lists import SinglyLinkedList
+from singly_linked_list import SinglyLinkedList
 
 def test_singly_linked_list_prepend(N):
     print("Testing SinglyLinkedList")
