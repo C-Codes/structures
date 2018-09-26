@@ -82,7 +82,7 @@ def test_doubly_linked_list_remove_end(N):
         l.remove_end()
     except Exception:
         print("Got expected Exception")
-    print_linked_list(l)
+    # print_linked_list(l)
 
 def print_linked_list(l):
     print("Print list:")
